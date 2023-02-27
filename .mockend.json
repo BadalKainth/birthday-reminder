@@ -1,0 +1,8 @@
+{
+    "User": {
+      "id": { "string": {} },
+      "name": { "string": {} },
+      "dob": { "string": {} },
+      "image": { "string": {} }
+    }
+  }
