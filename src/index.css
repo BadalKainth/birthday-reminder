@@ -136,7 +136,7 @@ p {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   align-items: center;
 }
@@ -148,7 +148,8 @@ main {
 
 .main h3 {
   font-weight: normal;
-  text-transform: none;
+  font-style: italic;
+  font-size: 32px;
   margin-bottom: 2rem;
 }
 
@@ -157,10 +158,42 @@ main {
   gap: 1rem
 }
 
+.addForm {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  cursor: normal;
+ 
+}
+
+.addForm div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addForm h3 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.addForm input {
+  width: 200px;
+  height: 25px;
+  background: #8cdfee;
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   background: #fff;
   padding: 10px;
   margin: 10px;
@@ -170,6 +203,7 @@ main {
 .card-container { 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 15px;
 
 }
@@ -189,26 +223,34 @@ main {
 }
 
 .card p {
-margin-bottom: 0;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
-.button {
+.button,
+.addDOB {
   color: var(--clr-pink);
   display: block;
   background: white;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 2rem auto;
   text-transform: capitalize;
   font-size: 1.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   letter-spacing: var(--spacing);
-  border-radius: var(--radius);
+  border-radius: 8px;
   outline: 1px solid rgba(80, 169, 213, 0.8);
   cursor: pointer;
   border: none;
   outline: none
 }
 
-.button:hover {
+.button:hover,
+.addDOB:hover {
   background: rgb(243, 243, 243);
 }
 
+.footer p {
+  display: flex;
+  justify-content: center;
+  color: #395866;
+}
