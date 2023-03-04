@@ -43,7 +43,7 @@ function App() {
         <section>
           {show ? <AddPerson addNewPerson={addNewPerson} /> : null}
           {!show ? (
-            <button className="addDOB" onClick={() => setShow(!show)}>
+            <button className="button" onClick={() => setShow(!show)}>
               Add New
             </button>
           ) : null}
@@ -57,7 +57,10 @@ function App() {
         </button>
       </main>
       <footer className="footer">
-        <p>HTML5, CSS3, Javascript & ReactJS is used to build this project.</p>
+        <p>
+          HTML5, CSS3, Javascript & ReactJS is used to build this project by
+          Badal Kainth.
+        </p>
       </footer>
     </>
   );

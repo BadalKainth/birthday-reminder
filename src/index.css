@@ -41,7 +41,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   --max-width: 1170px;
   --fixed-width: 450px;
-  --clr-pink: #34cfeb;
+  --clr-pink: #f7f7f7;
 }
 /*
 =============== 
@@ -93,7 +93,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: #26373f;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -165,8 +165,9 @@ main {
 .addForm {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #7edaeb;
   padding: 20px;
+  margin: 20px;
   width: 350px;
   border-radius: 10px;
   cursor: normal;
@@ -187,7 +188,7 @@ main {
 .addForm input {
   width: 200px;
   height: 25px;
-  background: #8cdfee;
+  background: #ffffff;
   outline: none;
   border: 1px solid rgb(0, 0, 0);
 }
@@ -196,7 +197,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #fff;
+  background: #7edaeb;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
@@ -225,33 +226,37 @@ main {
 
 .card p {
   font-size: 16px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .button,
-.addDOB {
+.submit-btn {
   color: var(--clr-pink);
   display: block;
-  background: white;
+  background: #5dd4f1;
   margin: 2rem auto 2rem auto;
   text-transform: capitalize;
   font-size: 1.25rem;
   padding: 0.6rem 1rem;
   letter-spacing: var(--spacing);
   border-radius: 8px;
-  outline: 1px solid rgba(80, 169, 213, 0.8);
+  outline: 1px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
   border: none;
   outline: none;
 }
 
+.submit-btn {
+  margin: 5px auto;
+}
+
 .button:hover,
-.addDOB:hover {
-  background: rgb(243, 243, 243);
+.submit-btn:hover {
+  background: #62b3c7;
 }
 
 .footer p {
   display: flex;
   justify-content: center;
-  color: #395866;
+  color: #253b46;
 }

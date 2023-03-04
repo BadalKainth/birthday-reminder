@@ -37,7 +37,7 @@ export default function AddPerson({ addNewPerson }) {
         ></input>
       </div> */}
       <div>
-        <button type="submit" className="button">
+        <button type="submit" className="submit-btn">
           Submit
         </button>
       </div>
