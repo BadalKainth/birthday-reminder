@@ -1,5 +1,5 @@
 import React from "react";
-import { getAge } from "./utils/date";
+import { getAge } from "../utils/date";
 
 const Card = ({ person }) => {
   const { id, name, image, dob } = person;

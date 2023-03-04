@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import List from "./List";
+import List from "./components/List";
 import { API_URL } from "./config";
 import "./App.css";
-import AddPerson from "./AddPerson";
+import AddPerson from "./components/AddPerson";
 import axios from "axios";
 
 axios.defaults.baseURL = API_URL;
