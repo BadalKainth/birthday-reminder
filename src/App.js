@@ -1,10 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import List from "./List";
-import data from "./data";
+import { API_URL } from "./config";
 import "./App.css";
+import AddPerson from "./AddPerson";
+import axios from "axios";
+
+axios.defaults.baseURL = API_URL;
+
 function App() {
-  const [persons, setPersons] = useState(data);
+  const [persons, setPersons] = useState([]);
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    async function getBirthdays() {
+      const response = await axios.get(`/birthdays`);
+      setPersons(response.data);
+    }
+    getBirthdays();
+  }, []);
+
+  async function addNewPerson(name, dob, image) {
+    if (!name || !dob || !image) {
+      alert("Please fill all the fields");
+    } else {
+      const response = await axios.post(`/birthdays`, {
+        name,
+        dob,
+        image,
+      });
+      const newData = [...persons, response.data];
+      setPersons(newData);
+      setShow(false);
+    }
+  }
+
   return (
     <>
       <main className="main">
@@ -12,29 +41,12 @@ function App() {
           <h1>BIRTHDAY REMINDER!</h1>
         </section>
         <section>
-          {show ? (
-            <form className="addForm">
-              <div className="name">
-                <h3>Name</h3>
-                <input></input>
-              </div>
-              <div className="DOB">
-                <h3>DOB</h3>
-                <input></input>
-              </div>
-              <div className="age">
-                <h3>Age</h3>
-                <input></input>
-              </div>
-              <div>
-                <h3>Avatar</h3>
-                <input type={Image}></input>
-              </div>
-            </form>
+          {show ? <AddPerson addNewPerson={addNewPerson} /> : null}
+          {!show ? (
+            <button className="addDOB" onClick={() => setShow(!show)}>
+              Add New
+            </button>
           ) : null}
-          <button className="addDOB" onClick={() => setShow(!show)}>
-            Add New
-          </button>
         </section>
         <h2>{persons.length} Birthdays in the List</h2>
         <section className="container">
