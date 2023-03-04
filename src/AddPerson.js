@@ -38,7 +38,7 @@ export default function AddPerson({ addNewPerson }) {
       </div> */}
       <div>
         <button type="submit" className="button">
-          Add New
+          Submit
         </button>
       </div>
     </form>
