@@ -3,11 +3,11 @@ import { useState } from "react";
 export default function AddPerson({ addNewPerson }) {
   const [name, setName] = useState("");
   const [dob, setDob] = useState("");
-  const [image, setImage] = useState("");
+  //   const [image, setImage] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    addNewPerson(name, dob, image);
+    addNewPerson(name, dob, `https://i.pravatar.cc/150?u=${name}`);
   }
 
   return (
@@ -28,14 +28,14 @@ export default function AddPerson({ addNewPerson }) {
           onChange={(e) => setDob(e.target.value)}
         ></input>
       </div>
-      <div>
+      {/* <div>
         <h3>Avatar</h3>
         <input
           type="url"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         ></input>
-      </div>
+      </div> */}
       <div>
         <button type="submit" className="button">
           Add New
